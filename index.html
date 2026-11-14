@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Deeksha B. Salian, an Artificial Intelligence and Machine Learning engineering student.">
+  <title>Deeksha B. Salian | AI & ML Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--panel:#121a2e;--panel2:#17223a;--text:#f4f7ff;--muted:#a8b3ca;--accent:#82aaff;--accent2:#8de3cf;--line:rgba(255,255,255,.11)}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 85% 0%,#1b3157 0,transparent 32%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,16,32,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.04em}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:26px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:white}
+    .hero{padding:100px 0 86px;display:grid;grid-template-columns:1.5fr .8fr;gap:50px;align-items:center}
+    .eyebrow{color:var(--accent2);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:.76rem}
+    h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.15;letter-spacing:-.04em}
+    h1{font-size:clamp(2.8rem,6vw,5rem);margin:18px 0}.gradient{background:linear-gradient(100deg,#fff 10%,#9dbbff 60%,#8de3cf);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:1.12rem;color:var(--muted);max-width:650px}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:12px;font-weight:700;border:1px solid var(--line);transition:.2s}
+    .primary{background:var(--accent);color:#0b1020;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+    .hero-card{padding:28px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(130,170,255,.15),rgba(141,227,207,.06));box-shadow:0 24px 70px #0003}
+    .orb{width:82px;height:82px;border-radius:24px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#0b1020;font:800 1.8rem Manrope;margin-bottom:25px}
+    .hero-card h3{font-size:1.25rem;margin:0 0 8px}.hero-card p{color:var(--muted);margin:0}
+    section{padding:72px 0;border-top:1px solid var(--line)}.section-head{margin-bottom:30px}
+    .section-head h2{font-size:clamp(2rem,4vw,2.8rem);margin:8px 0}.section-head p{color:var(--muted);max-width:650px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}
+    .card p{color:var(--muted);margin:8px 0 0}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .stat{background:var(--panel2);border-radius:15px;padding:18px}.stat strong{display:block;font:800 1.6rem Manrope;color:var(--accent2)}.stat span{color:var(--muted);font-size:.88rem}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{position:relative;overflow:hidden}.project:before{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:#82aaff14;right:-65px;top:-70px}
+    .project .tag{display:inline-block;color:var(--accent2);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .project h3{font-size:1.45rem;margin:12px 0}.project ul{padding-left:19px;color:var(--muted);margin-bottom:18px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:.78rem;color:#dce6ff;background:#243452;border:1px solid #344766;padding:5px 10px;border-radius:30px}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill h3{font-size:1.05rem;margin:0 0 12px}.skill p{font-size:.9rem;color:var(--muted);margin:0}
+    .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.cert{padding:17px 19px;background:var(--panel);border:1px solid var(--line);border-radius:14px}.cert strong{display:block}.cert span{color:var(--muted);font-size:.88rem}
+    .timeline{display:grid;gap:14px}.item{display:flex;gap:16px;align-items:flex-start}.dot{width:10px;height:10px;background:var(--accent2);border-radius:50%;margin-top:8px;flex:none;box-shadow:0 0 0 6px #8de3cf18}
+    .item p{color:var(--muted);margin:5px 0 0}
+    .contact{display:flex;justify-content:space-between;gap:25px;align-items:center;background:linear-gradient(120deg,#17294a,#132c35);border:1px solid var(--line);padding:34px;border-radius:22px}
+    .contact h2{font-size:2rem;margin:0 0 8px}.contact p{color:var(--muted);margin:0}
+    footer{padding:28px 0;color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){.navlinks{gap:12px;font-size:.8rem}.hero{grid-template-columns:1fr;padding:72px 0}.hero-card{max-width:440px}.about-grid,.project-grid,.skills-grid,.cert-grid{grid-template-columns:1fr}.contact{display:block}.contact .btn{margin-top:20px}}
+    @media(max-width:440px){.navlinks a:nth-child(2),.navlinks a:nth-child(4){display:none}.wrap{width:88%}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="brand" href="#home">DEEKsha<span>.</span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">AI & Machine Learning Engineering Student</div>
+      <h1><span class="gradient">Deeksha B. Salian</span></h1>
+      <p class="lead">Curious about building useful technology at the intersection of Artificial Intelligence, software development, and data science. I enjoy learning, experimenting, and turning ideas into practical projects.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my work ↗</a>
+        <a class="btn" href="mailto:saliandeeksha21@gmail.com">Get in touch</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="orb">DS</div>
+      <h3>Learning. Building. Improving.</h3>
+      <p>Focused on strengthening my technical foundations and creating thoughtful, user-oriented solutions.</p>
+    </aside>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">A little about me</div><h2>Building a foundation for what’s next.</h2></div>
+    <div class="about-grid">
+      <div class="card"><p>I am pursuing a B.E. in Artificial Intelligence & Machine Learning at Yenepoya Institute of Technology, Moodbidri. My interests include software development, AI/ML, and data science. I bring foundational experience with Python, C, JavaScript, web technologies, and databases, along with a strong willingness to learn and contribute in a professional environment.</p></div>
+      <div class="stats">
+        <div class="stat"><strong>8.72</strong><span>Current CGPA</span></div>
+        <div class="stat"><strong>2027</strong><span>Expected graduation</span></div>
+        <div class="stat"><strong>2</strong><span>Academic projects</span></div>
+        <div class="stat"><strong>AI/ML</strong><span>Area of study</span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="projects"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Selected academic work</div><h2>Projects</h2><p>Academic projects exploring applied AI, computer vision, and full-stack development.</p></div>
+    <div class="project-grid">
+      <article class="card project">
+        <span class="tag">AI · Full-stack · Healthcare</span>
+        <h3>AI Smart Healthcare System</h3>
+        <ul>
+          <li>Designed and developed an AI-powered healthcare platform for disease prediction, health monitoring, and chatbot-based assistance.</li>
+          <li>Implemented AI/ML models to provide health insights, risk analysis, and real-time monitoring.</li>
+        </ul>
+        <div class="chips"><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">FastAPI</span><span class="chip">MongoDB</span><span class="chip">Python</span></div>
+      </article>
+      <article class="card project">
+        <span class="tag">AI · Computer Vision · Security</span>
+        <h3>Smart Home Door Locking System</h3>
+        <ul>
+          <li>Developed an AI-based smart door locking system using face recognition and multi-factor authentication for access control.</li>
+          <li>Implemented facial recognition, liveness detection, and OTP verification to help prevent unauthorized access.</li>
+        </ul>
+        <div class="chips"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Face Recognition</span><span class="chip">OTP Verification</span></div>
+      </article>
+    </div>
+    <p style="color:var(--muted);font-size:.88rem;margin-top:18px">Project repositories and live demos can be linked here when available.</p>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Technical toolkit</div><h2>Skills & technologies</h2></div>
+    <div class="skills-grid">
+      <div class="card skill"><h3>Programming</h3><p>Python · C · JavaScript</p></div>
+      <div class="card skill"><h3>Web technologies</h3><p>HTML5 · CSS3 · React.js</p></div>
+      <div class="card skill"><h3>Backend</h3><p>Node.js · Express.js · FastAPI</p></div>
+      <div class="card skill"><h3>Databases</h3><p>MongoDB · MySQL</p></div>
+      <div class="card skill"><h3>AI & Data</h3><p>NumPy · Pandas · OpenCV · NLP · Machine Learning fundamentals</p></div>
+      <div class="card skill"><h3>Tools & core subjects</h3><p>Git · GitHub · VS Code · Postman · DSA · OOP · DBMS · OS · Computer Networks</p></div>
+    </div>
+  </div></section>
+
+  <section id="certifications"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Continuous learning</div><h2>Certifications & learning</h2></div>
+    <div class="cert-grid">
+      <div class="cert"><strong>Algo University GenAI Camp</strong><span>Generative AI, Multimodal AI Systems & NLP</span></div>
+      <div class="cert"><strong>GenAI Powered Data Analytics Job Simulation</strong><span>Forage</span></div>
+      <div class="cert"><strong>AI for Beginners</strong><span>HP Foundation</span></div>
+      <div class="cert"><strong>Natural Language Processing and Text Mining Tutorial</strong><span>Simplilearn</span></div>
+      <div class="cert"><strong>Generative AI for Beginners</strong><span>Simplilearn</span></div>
+      <div class="cert"><strong>R for Data Science</strong><span>Cognitive Class.ai</span></div>
+      <div class="cert"><strong>Git Training</strong><span>IIT Bombay · Spoken Tutorial</span></div>
+      <div class="cert"><strong>R Training</strong><span>IIT Bombay · Spoken Tutorial</span></div>
+    </div>
+  </div></section>
+
+  <section id="highlights"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Beyond the classroom</div><h2>Highlights</h2></div>
+    <div class="timeline">
+      <div class="item"><span class="dot"></span><div><strong>AlgoUniversity GenAI Camp</strong><p>Completed the camp under the mentorship of Microsoft Engineer Nipun, gaining practical knowledge of Generative AI, Multimodal AI Systems, and NLP.</p></div></div>
+      <div class="item"><span class="dot"></span><div><strong>Tech Fusion 2.0 Hackathon</strong><p>Participated in a hackathon focused on IoT, Cybersecurity, and Blockchain technologies.</p></div></div>
+      <div class="item"><span class="dot"></span><div><strong>Artificial Super Intelligence webinar</strong><p>Participated in a webinar to gain insights into advanced AI concepts and future technologies.</p></div></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="contact">
+      <div><div class="eyebrow">Let’s connect</div><h2>Open to learning and opportunities.</h2><p>Feel free to reach out for professional connections, collaborations, or opportunities.</p></div>
+      <a class="btn primary" href="mailto:saliandeeksha21@gmail.com">Email me ↗</a>
+    </div>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);margin-top:20px;font-size:.92rem">
+      <a href="mailto:saliandeeksha21@gmail.com">saliandeeksha21@gmail.com</a>
+      <a href="tel:+917899827472">+91 7899827472</a>
+      <a href="https://www.linkedin.com/in/deeksha-salian-212577292/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      <span>Udupi, Karnataka, India</span>
+    </div>
+  </div></section>
+</main>
+<footer class="wrap"><span>© 2026 Deeksha B. Salian</span><span>Designed to grow with my learning journey.</span></footer>
+</body>
+</html>
